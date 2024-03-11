@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myanmar Food</title>
+    <link    href="css/bootstrap.min.css"    rel="stylesheet" >
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <link rel="shortcut icon" href="img/food logo.jpg" />
+    <style>
+        nav{
+            font-size: larger;
+        }
+        #food{
+            font-size: xx-large;
+        }
+        #item{
+            position: sticky;
+        }
+        
+        nav{
+            background-color: rgb(70, 70, 70);
+            width: 100%;
+        }
+       #Search{
+       font-size: larger;
+        border-radius: 10px;
+        width:45% ;
+        height: 40px;
+        border-color: rgb(0, 0, 0);
+       }
+       #searchicon{
+        margin-top: 20%;
+        margin-left: 40%;
+        
+       }
+       #clock{
+        color: whitesmoke;
+       }
+       </style>
+       <script>
+        function updatedClock(){
+            var currentTime = new Date();
+            
+            var currentHours = currentTime.getHours();
+            var currentMinutes = currentTime.getMinutes();
+            var currentSeconds = currentTime.getSeconds();
+        
+            // Pad the minutes and seconds with leading zeros, if required
+            currentMinutes = (currentMinutes < 10 ? "0" : "")+ currentMinutes;
+            currentSeconds = (currentSeconds < 10 ? "0" : "")+ currentSeconds;
+        
+            // Choose enther "AM" or "PM" as appropriate
+            var timeOfDay = (currentHours < 12 )? " AM " : " PM ";
+        
+            // Convert the hours component to 12-hour format if needed
+            currentHours = (currentHours > 12)? currentHours - 12 : currentHours;
+            
+            // compose the string for display 
+            var currentTimeString = currentHours + ":" + currentMinutes + ":" + currentSeconds +
+             timeOfDay;
+            
+            // Update the time display
+            document.getElementById("clock").innerHTML = currentTimeString;
+        }
+            </script>
+</head>
+<body onload="updatedClock(); setInterval('updatedClock()', 1000)">
+    <nav class="navbar navbar-expand-lg navbar-dark  ">
+        <div class="container-fluid">
+            <a href="index.html" class="navbar-brand" id="food">Food</a>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" 
+            data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav">
+                    <a href="index.html" class="nav-item nav-link active" id="item">Home</a>
+                    <div class="dropdown" id="dropdown">
+                        <button class="btn btn-muted text-light mt-2 display-6" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Food Type
+                        </button>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="myanmar.html">Myanmar Food</a></li>
+                          <li><a class="dropdown-item" href="koran.html">Korean Food</a></li>
+                          <li><a class="dropdown-item" href="japen.html">Japenese Food</a></li>
+                          <li><a class="dropdown-item" href="italy.html">Italien Food</a></li>
+                        </ul>
+                      </div>
+                   
+                </div>
+                <span id="clock"></span>
+                <div class="navbar-nav ms-auto">
+                   <!--Boostrap Modal-->
+    
+<form action="#">
+    <div>
+        <!--Button to open the modal-->
+        <button class="btn btn-danger mt-4" type="button" data-bs-toggle="modal" data-bs-target="#signup">Sing Up</button>
+        <!--Button to open the modal-->
+
+        <!--The Modal-->
+        <div class="modal fade" id="signup">
+            <div class="modal-dialog modal-side modal-top-right">
+                <div class="modal-content">
+                    <!--Modal Header-->
+                    <div class="modal-header">
+                        <h4 class="modal-title">
+                            Registration
+                        </h4>
+                        <button class="btn-close" type="button" data-bs-dismiss="modal"></button>
+                    </div>
+                    <!--Modal Header-->
+
+                    <!--Modal Body-->
+                    <div class="modal-body mt-3">
+                        <table>
+                            <p>
+                                <tr>
+                                <label>Username:</label>
+                                <input type="text" name="name">
+                                </tr>
+                            </p>
+                            <p>
+                                <tr>
+                                <label>Password:</label>
+                                <input type="text" name="address">
+                                </tr>
+                            </p>
+                        </table>
+                    </div>
+                    <!--Modal Body-->
+
+                    <!--Modal Footer-->
+                    <div class="modal-footer">
+                        <button class="btn btn-danger" type="submit">Sign up</button>
+                        <button class="btn btn-danger" type="button" data-bs-dismiss="modal">Close</button>
+                    </div>
+                    <!--Modal Footer-->
+                </div>
+            </div>
+        </div>
+        <!--The Modal-->
+    </div>
+    <!--Boostrap Modal-->
+</form>
+                    <a href="login.html" class="nav-item nav-link mt-4">Login</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="row container-fluid text-center ">
+        <div class="card text-center m-3 col-md-4" style="width: 400px;">
+            <div class="card-header">Mohinga</div>
+            <div class="card-body">
+                <img src="img/myanmar 1.jpg" style="width: 100%;">
+                    <h5 class="card-title">Mohinga is a champion of breakfasts</h5>
+                        <p class="card-text">Myanmar's unofficial national dish is Mohinga - a type of fish soup with thin rice noodles, banana stem and perfumed with lemongrass. Optional toppings include boiled egg, akyaw (crispy fried bean fritters) and coriander. You can add drops of lime juice, fish sauce or dry chili powder for your preferable taste. It is Myanmar's traditional breakfast but is also taken as a snack which people love to eat throughout the day.</p>
+            </div>
+        </div>
+        
+        <div class="card text-center m-3 col-md-4" style="width: 400px;">
+            <div class="card-header">Ohnn Noe Khao Swe (Myanmar Coconut Chicken Noodle Soup)</div>
+                <div class="card-body">
+                    <img src="img/myanmar 2.jpg" style="width: 100%;">
+                        <h5 class="card-title">The best tastefully noodle soup!</h5>
+                            <p class="card-text">Ohnn Noe Khao Swe (Coconut Chicken Noodle Soup) is also famous as Mohinga with its own different style. It's wheat noodles with a curried chicken and coconut milk soup. You can add heard boiled egg, crisp noodles, sliced onions, chili powder and fish sauce for your preferable taste. 2 or 3 drops of lime or lemon juice will make the soup better. You can find coconut noodles almost everywhere at tea-house and street vendors in town.</p>
+                </div>
+            </div>
+    
+            <div class="card text-center m-3 col-md-4" style="width: 400px;">
+                <div class="card-header">Kaut Nyinn Paung (Sticky rice)</div>
+                    <div class="card-body">
+                        <img src="img/myanmar 5.jpg" style="width: 100%;">
+                            <h5 class="card-title">The best choice for people who likes ‘steamed sticky rice’!</h5>
+                                <p class="card-text">In Myanmar, Kaut Nyin Paung is mostly served for the breakfast or sometime at the tea time in the afternoon. It is one of the dishes always can be easily bought in markets and tea shops. It is steamed sticky rice brown or white, served with pea, sesame powder, salt and shredded coconut. You can eat with tea, dried fish and also with deep fried tempura.</p>
+                    </div>
+            </div>
+                    <div class="card text-center m-3 col-md-4" style="width: 400px;">
+                        <div class="card-header">   Burmese Coconut Rice</div>
+                            <div class="card-body">
+                                <img src="img/myanmar 7.jpg" style="width: 100%;">
+                                    <h5 class="card-title">Full Nutrition Burmese Dish!</h5>
+                                        <p class="card-text">Coconut Rice – is a really delicious dish that couldn’t be simpler. It is prepared by soaking white rice in coconut milk or cooking it with coconut flakes. It goes well with many Thai dishes, some southern Indian dishes, as well as traditional Burmese cuisine.</p>
+                            </div>
+                    </div>
+            
+            <div class="card text-center m-3 col-md-4" style="width: 400px;">
+                <div class="card-header"> Si Hta Min (Yellow Myanmar Sticky Rice)</div>
+                    <div class="card-body">
+                        <img src="img/myanmar 6.jpg" style="width: 100%;">
+                            <h5 class="card-title">Delicious Simple Sticky Rice!</h5>
+                                <p class="card-text">Si Hta Minn or Yellow Myanmar Sticky Rice is always simple and delicious. It is one of the typical breakfasts in Myanmar and also a popular dish in pagoda festivals. Steamed peas and baked dried fish are a perfect duo with Si Hta Minn. It is sprinkled the Si Hta Minn with fried onion and sesame powder.</p>
+                    </div>
+            </div>
+            <div class="card text-center m-3 col-md-4" style="width: 400px;">
+                <div class="card-header">Shan Noodle</div>
+                    <div class="card-body">
+                        <img src="img/myanmar 9.jpg" style="width: 100%;">
+                            <h5 class="card-title">Must-try Rice Noodle Salad !</h5>
+                                <p class="card-text">Shan noodles are the popular dish and its traditional food of Shan Ethnic. You can see everywhere in tea shops or in local markets. It's served with thin rice noodle with chicken or pork broth as a soup. Or you can mix the noodle with chicken gravy, sesame and roasted peanut as a salad, adding pickled mustard green and chopped leek in both versions.</p>
+                    </div>
+            </div>
+            <div class="card text-center m-3 col-md-4" style="width: 400px;">
+                <div class="card-header">Rakhine Mote Ti</div>
+                    <div class="card-body">
+                        <img src="img/myanmar 8.jpg" style="width: 100%;">
+                            <h5 class="card-title">The best hot and spicy traditional food!</h5>
+                                <p class="card-text">Rakhine Mote Ti is the traditional food of Rakhine State in the western part of Myanmar. Most people usually have this in the afternoon and evening. The taste is sour, spicy or some combination of three. The ingredients are thin rice vermicelli, fresh fish, ngapi (shrimp/fish paste), lemongrass, pepper, garlic, green chili paste, red chili sauce, crisp garlic garnish and coriander. You can try with two different style; one is salad with the taste of sour, spicy and salt and another style is trying thin rice vermicelli with the fish soup. You can get it spicier by combining some chili paste, tamarind liquid and fish paste liquid. Rakhine Mote Ti is not only in some tea shops but aslo in some stalls as a street food in down town Yangon, Mandalay and other cities also.</p>
+                    </div>
+            </div>
+            
+            <div class="card text-center m-3 col-md-4" style="width: 400px;">
+                <div class="card-header">Laphet Thoke (Tea Leaf Salad)</div>
+                    <div class="card-body">
+                        <img src="img/myanmar 4.jpg" style="width: 100%;">
+                            <h5 class="card-title">Well known Myanmar Salad!</h5>
+                                <p class="card-text">Pickled tea Leaf salad is a dish which plays an important role at social and religious occasions throughout the country. To make the dish, the sour, slightly bitter leaves are mixed by hand with shredded cabbage, sliced tomatoes, crunchy deep-fried beans, nuts and peas, a splash of garlic oil and pungent slices of chili and garlic.
+                                    Laphet Thoke is the most popular Myanmar food in everyday life of Burmese people. Whenever people gather at someone's home or at a tea shop, usually expect to enjoy this cold dish together with hot green tea. It can be a snack, an appetizer or, coupled with a plate of rice, a meal.</p>
+                    </div></div>
+            <div class="card text-center m-3 col-md-4" style="width: 400px;">
+                <div class="card-header"> Nan Gyi Thoke (Rice Noodle Salad)</div>
+                    <div class="card-body">
+                        <img src="img/myanmar 3.jpg" style="width: 100%;">
+                            <h5 class="card-title">Burmese version of Spaghetti for any kinds of people!</h5>
+                                <p class="card-text">Nan gyi Thoke is another popular breakfast food. However, it is available from morning till afternoon as some people eats regardless of the time. It has been equated as a Burmese version of spaghetti. The name 'nan gyi' refers to the round thick rice noodles and 'thoke' means salad. The dish is made with thick round rice noodles mixed with specifically prepared chicken curry. Nan Gyi Thoke is commonly served with topping like coriander, crispy fritter and boiled egg. Small bowl of soup is usually accompanied by the Noodle when you order Nan Gyi Thoke in Myanmar. Of course, it's a complementary and you can ask for extra soup in case you want more. That is one the most interesting culture foreigner may find or perhaps strange when visiting Myanmar. Be sure to try this wonderful Nan Gyi Thoke. It is very delicious.</p>
+                    </div>
+            </div>
+
+    </div>
+    <footer>
+        <div class="container mt-20" id="cerousel">
+            <ul class="pagination">
+                
+                <li class="page-item"><a href="myanmar.html" class="page-link">1</a></li>
+                <li class="page-item"><a href="koran.html" class="page-link">2</a></li>
+                <li class="page-item"><a href="japen.html" class="page-link">3</a></li>
+                <li class="page-item"><a href="italy.html" class="page-link">4</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

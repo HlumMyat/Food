@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Italian Food</title>
+    <link    href="css/bootstrap.min.css"    rel="stylesheet" >
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <link rel="shortcut icon" href="img/food logo.jpg" />
+    <style>
+        nav{
+            font-size: larger;
+        }
+        #food{
+            font-size: xx-large;
+        }
+        #item{
+            position: sticky;
+        }
+     
+        nav{
+            background-color: rgb(70, 70, 70);
+            width: 100%;
+        }
+       #Search{
+       font-size: larger;
+        border-radius: 10px;
+        width:45% ;
+        height: 40px;
+        border-color: rgb(0, 0, 0);
+       }
+       #searchicon{
+        margin-top: 20%;
+        margin-left: 40%;
+        
+       }#clock{
+        color: whitesmoke;
+       }
+       </style>
+       <script>
+        function updatedClock(){
+            var currentTime = new Date();
+            
+            var currentHours = currentTime.getHours();
+            var currentMinutes = currentTime.getMinutes();
+            var currentSeconds = currentTime.getSeconds();
+        
+            // Pad the minutes and seconds with leading zeros, if required
+            currentMinutes = (currentMinutes < 10 ? "0" : "")+ currentMinutes;
+            currentSeconds = (currentSeconds < 10 ? "0" : "")+ currentSeconds;
+        
+            // Choose enther "AM" or "PM" as appropriate
+            var timeOfDay = (currentHours < 12 )? " AM " : " PM ";
+        
+            // Convert the hours component to 12-hour format if needed
+            currentHours = (currentHours > 12)? currentHours - 12 : currentHours;
+            
+            // compose the string for display 
+            var currentTimeString = currentHours + ":" + currentMinutes + ":" + currentSeconds +
+             timeOfDay;
+            
+            // Update the time display
+            document.getElementById("clock").innerHTML = currentTimeString;
+        }
+            </script>
+</head>
+<body onload="updatedClock(); setInterval('updatedClock()', 1000)">
+    <nav class="navbar navbar-expand-lg navbar-dark  ">
+        <div class="container-fluid">
+            <a href="index.html" class="navbar-brand" id="food">Food</a>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" 
+            data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav">
+                    <a href="index.html" class="nav-item nav-link active" id="item">Home</a>
+                    <div class="dropdown" id="dropdown">
+                        <button class="btn btn-muted text-light mt-2 display-6" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Food Type
+                        </button>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="myanmar.html">Myanmar Food</a></li>
+                          <li><a class="dropdown-item" href="koran.html">Korean Food</a></li>
+                          <li><a class="dropdown-item" href="japen.html">Japenese Food</a></li>
+                          <li><a class="dropdown-item" href="italy.html">Italien Food</a></li>
+                        </ul>
+                      </div>
+                   
+                </div>
+                <span id="clock"></span>
+                <div class="navbar-nav ms-auto">
+                   <!--Boostrap Modal-->
+    
+<form action="#">
+    <div>
+        <!--Button to open the modal-->
+        <button class="btn btn-danger mt-4" type="button" data-bs-toggle="modal" data-bs-target="#signup">Sing Up</button>
+        <!--Button to open the modal-->
+
+        <!--The Modal-->
+        <div class="modal fade" id="signup">
+            <div class="modal-dialog modal-side modal-top-right">
+                <div class="modal-content">
+                    <!--Modal Header-->
+                    <div class="modal-header">
+                        <h4 class="modal-title">
+                            Registration
+                        </h4>
+                        <button class="btn-close" type="button" data-bs-dismiss="modal"></button>
+                    </div>
+                    <!--Modal Header-->
+
+                    <!--Modal Body-->
+                    <div class="modal-body mt-3">
+                        <table>
+                            <p>
+                                <tr>
+                                <label>Username:</label>
+                                <input type="text" name="name">
+                                </tr>
+                            </p>
+                            <p>
+                                <tr>
+                                <label>Password:</label>
+                                <input type="text" name="address">
+                                </tr>
+                            </p>
+                        </table>
+                    </div>
+                    <!--Modal Body-->
+
+                    <!--Modal Footer-->
+                    <div class="modal-footer">
+                        <button class="btn btn-danger" type="submit">Sign up</button>
+                        <button class="btn btn-danger" type="button" data-bs-dismiss="modal">Close</button>
+                    </div>
+                    <!--Modal Footer-->
+                </div>
+            </div>
+        </div>
+        <!--The Modal-->
+    </div>
+    <!--Boostrap Modal-->
+</form>
+                    <a href="login.html" class="nav-item nav-link mt-4">Login</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+   
+    <div class="row container-fluid text-center ">
+         <div class="card text-center m-3 col-md-6" style="width: 400px;">
+             <div class="card-header">Pizza</div>
+                 <div class="card-body">
+                     <img src="img/Italian 1.jpg" style="width: 100%;">
+                         
+                            <p class="card-text">Number one on our list of the best traditional foods in Italy has to be pizza. Everyone knows what pizza is, it needs no introduction, but what you probably know as pizza isn’t quite the same as in Italy. Pizza has been around the Italian Peninsula for centuries, but it was in 1889 when Queen Margherita of Savoy visited the city of Naples that the famous pizza Margherita was born. The story goes that the queen was tired of French cuisine and that she summoned Raffaele Esposito, a well-known pizza-maker, to create an original pizza for her. Queen Margherita approved of the pizza consisting of tomato sauce, mozzarella and basil. Immediately after this, Raffaele Esposito named his pizza the Margherita and asked the Queen for her royal approval.</p>
+                                
+                </div>
+         </div>
+                      
+         <div class="card text-center m-3 col-md-6" style="width: 400px;">
+             <div class="card-header">Pasta</div>
+                <div class="card-body">
+                    <img src="img/italian 2.jpg" style="width: 100%;">
+                        
+                            <p class="card-text">The perfect example of the beauty of simplicity… the simple combination of eggs, flour, water, olive oil, and salt gives us more than 400 styles of pasta! Some of the most popular types of pasta are fettuccine, spaghetti, penne, and tagliatelle. Each region in Italy has its own signature style: Tuscany houses the best pappardelle and Rome the fettuccine. Pasta may be prepared in a variety of ways: creamy, with pesto, with fresh tomato sauce, or even stuffed. But certainly, one of the most popular pasta dishes in Italy, especially in Rome, is Spaghetti a la Carbonara made with guanciale, egg, pecorino cheese, and black pepper.</p>
+                                 
+                 </div>
+             </div>
+
+             <div class="card text-center m-3 col-md-6" style="width: 400px;">
+                <div class="card-header">Arancini
+                </div>
+                   <div class="card-body">
+                       <img src="img/italian 3.jpg" style="width: 100%;">
+                           
+                               <p class="card-text">Arancini are fried rice balls. There are two main types: Roman and Sicilian. Both are filled with ragu or tomato sauce, mozzarella cheese, and Arborio rice, used to make risotto. The difference is that the Sicillian arancino recipes typically add beef and peas. Those are common fillings, but you can also find arancini filled with other vegetables. Arancini are coated in breadcrumbs and deep fried giving them a golden and crispy outside, which is how they got their name “Arancini”, which means little orange. They are served with a side of marinara sauce and are one of the best Italian treats found in all kinds of establishments around Italy including market stalls, pubs and bars, and fine dining restaurants. A locals favorite!</p>
+                                    
+                    </div>
+                </div>
+                <div class="card text-center m-3 col-md-6" style="width: 400px;">
+                    <div class="card-header">Focaccia</div>
+                       <div class="card-body">
+                           <img src="img/italian 4.jpg" style="width: 100%;">
+                               
+                                   <p class="card-text">Italian dough is so good that it needed a special bread to homage it. Focaccia is an oven-baked Italian bread in between flatbread and pizza. Depending on the region, it may look different, it may have different ingredients and toppings, and even a different name. In the Tuscan area it is known as schiacciata, in Basilicata, strazzata, and crescia in Umbria. It is typically a bread with herb toppings and olive oil. Perfect for a starter or just as an afternoon snack.</p>
+                                        
+                        </div>
+                    </div>
+                    <div class="card text-center m-3 col-md-6" style="width: 400px;">
+                        <div class="card-header">Italian Cheese</div>
+                           <div class="card-body">
+                               <img src="img/italian 5.jpg" style="width: 100%;">
+                                   
+                                       <p class="card-text">There’s so much in the Italian cheese culture that it needs its own list. Cheese has been around the Italian Peninsula for centuries. Ancient Romans created a vast variety of cheeses and experimented with them by smoking, melting, and aging them, giving us the basis of many famous cheeses found today. Strong, soft, creamy, grained, sweet, or salty, how can anyone say no to a good piece of cheese? As is common with every Italian food, each region has mastered a specific type of cheese, but all are equally good. Locals say the best mozzarella is sold in Southern Naples, it is a fresh kind of cheese made with buffalo milk. Parmigiano Reggiano cheese is found in Parma in the region of Emilia-Romagna. Parmesan cheese, also known as the “King of Cheeses”, is worldwide famous and its magic is that it goes well with everything. Gorgonzola is the Italian blue cheese from the Gorgonzola region, one of the greatest strong cheeses and one of the most beloved in Italy. Grana Padano, Pecorino, and mascarpone cheese are also on the list of the best Italian cheeses.</p>
+                                            
+                            </div>
+                        </div>
+                        <div class="card text-center m-3 col-md-6" style="width: 400px;">
+                            <div class="card-header">Lasagna</div>
+                               <div class="card-body">
+                                   <img src="img/italian 6.jpg" style="width: 100%;">
+                                       
+                                           <p class="card-text">A meal made up of layers of pasta, meat, cheese, and tomato sauce is as close as it can get to culinary perfection. There’s also a vegetarian version where meat is substituted with vegetables, that way everyone has the chance to try the amazing Italian dish. Lasagna is from the Naples region and it was originally cooked with bechamel sauce, ragu, and cheese, but over the years, with more international ingredients available, lasagna transformed into what we know today.</p>
+                                                
+                                </div>
+                            </div>
+                            <div class="card text-center m-3 col-md-6" style="width: 400px;">
+                                <div class="card-header">Ossobuco</div>
+                                   <div class="card-body">
+                                       <img src="img/italian 7.jpg" style="width: 100%;">
+                                           
+                                               <p class="card-text">Ossobuco is a dish from Milan and is the best example of elaborate Italian cuisine. It is slowly cooked and may take up to three hours to be ready, but that results in a meat so delicious and tender that it’s going to be worth the wait. Ossobuco is veal shanks with a red or white wine sauce, vegetables, garlic, lemon zest, lemon juice, and other spices. The best part of the dish is when it’s all finished and you get to tase the delicious bone marrow. That’s where its name comes from, Ossobuco means “Hollow Bone”, the name itself invites people to try the entire thing making it one of the most traditional foods in Italy.</p>
+                                                    
+                                    </div>
+                                </div>
+                                <div class="card text-center m-3 col-md-6" style="width: 400px;">
+                                    <div class="card-header">Risotto</div>
+                                       <div class="card-body">
+                                           <img src="img/italian 8.jpg" style="width: 100%;">
+                                               
+                                                   <p class="card-text">Because rice by itself is kinda boring, Italians found a way to make it extra interesting and delicious. This rice dish comes from Lombardy and uses Arborio or Carnaroli rice. Its most popular preparation is the risotto a la Milanesa with saffron, beef or chicken stock (sometimes fish stock), cheese, and lard, everything held together with a creamy sauce made with butter and other spices. In other regions it is served with different kinds of proteins and sauces giving the risotto different colors, but the same deliciousness.</p>
+                                                        
+                                        </div>
+                                    </div>
+                                    <div class="card text-center m-3 col-md-6" style="width: 400px;">
+                                        <div class="card-header">Truffles</div>
+                                           <div class="card-body">
+                                               <img src="img/italian 9.jpg" style="width: 100%;">
+                                                   
+                                                       <p class="card-text">One of the best gifts Italy has given the world, even though it is possible to find truffles in a few other places, no other country produces them with such quality and volume. Truffles are a highly aromatic fungus that are found near the tree roots in the forests of Piedmont and Umbria between the months of November and March. They are found by trained dogs and may be white truffles, which are stronger, or black truffles with a lighter taste and smell. Both of them are among the most expensive foods in the world. With a pasta dish, a salad, or even a breakfast egg, truffles will add a strong, but delicious, special fragrance to your food.</p>
+                                                            
+                                            </div>
+                                        </div>
+    <footer>
+        <div class="container mt-20" id="cerousel">
+            <ul class="pagination">
+                
+                <li class="page-item"><a href="myanmar.html" class="page-link">1</a></li>
+                <li class="page-item"><a href="koran.html" class="page-link">2</a></li>
+                <li class="page-item"><a href="japen.html" class="page-link">3</a></li>
+                <li class="page-item"><a href="italy.html" class="page-link">4</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

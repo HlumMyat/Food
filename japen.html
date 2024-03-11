@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Japenese Food</title>
+    <link    href="css/bootstrap.min.css"    rel="stylesheet" >
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <link rel="shortcut icon" href="img/food logo.jpg" />
+    <style>
+        nav{
+            font-size: larger;
+        }
+        #food{
+            font-size: xx-large;
+        }
+        #item{
+            position: sticky;
+        }
+        
+        nav{
+            background-color: rgb(70, 70, 70);
+            width: 100%;
+        }
+       #Search{
+       font-size: larger;
+        border-radius: 10px;
+        width:45% ;
+        height: 40px;
+        border-color: rgb(0, 0, 0);
+       }
+       #searchicon{
+        margin-top: 20%;
+        margin-left: 40%;
+        
+       }#clock{
+        color: whitesmoke;
+       }
+       </style>
+       <script>
+        function updatedClock(){
+            var currentTime = new Date();
+            
+            var currentHours = currentTime.getHours();
+            var currentMinutes = currentTime.getMinutes();
+            var currentSeconds = currentTime.getSeconds();
+        
+            // Pad the minutes and seconds with leading zeros, if required
+            currentMinutes = (currentMinutes < 10 ? "0" : "")+ currentMinutes;
+            currentSeconds = (currentSeconds < 10 ? "0" : "")+ currentSeconds;
+        
+            // Choose enther "AM" or "PM" as appropriate
+            var timeOfDay = (currentHours < 12 )? " AM " : " PM ";
+        
+            // Convert the hours component to 12-hour format if needed
+            currentHours = (currentHours > 12)? currentHours - 12 : currentHours;
+            
+            // compose the string for display 
+            var currentTimeString = currentHours + ":" + currentMinutes + ":" + currentSeconds +
+             timeOfDay;
+            
+            // Update the time display
+            document.getElementById("clock").innerHTML = currentTimeString;
+        }
+            </script>
+</head>
+<body onload="updatedClock(); setInterval('updatedClock()', 1000)">
+    <nav class="navbar navbar-expand-lg navbar-dark  ">
+        <div class="container-fluid">
+            <a href="index.html" class="navbar-brand" id="food">Food</a>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" 
+            data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav">
+                    <a href="index.html" class="nav-item nav-link active" id="item">Home</a>
+                    <div class="dropdown" id="dropdown">
+                        <button class="btn btn-muted text-light mt-2 display-6" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Food Type
+                        </button>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="myanmar.html">Myanmar Food</a></li>
+                          <li><a class="dropdown-item" href="koran.html">Korean Food</a></li>
+                          <li><a class="dropdown-item" href="japen.html">Japenese Food</a></li>
+                          <li><a class="dropdown-item" href="italy.html">Italien Food</a></li>
+                        </ul>
+                      </div>
+                   
+                </div>
+                <span id="clock"></span>
+                <div class="navbar-nav ms-auto">
+                   <!--Boostrap Modal-->
+    
+<form action="#">
+    <div>
+        <!--Button to open the modal-->
+        <button class="btn btn-danger mt-4" type="button" data-bs-toggle="modal" data-bs-target="#signup">Sing Up</button>
+        <!--Button to open the modal-->
+
+        <!--The Modal-->
+        <div class="modal fade" id="signup">
+            <div class="modal-dialog modal-side modal-top-right">
+                <div class="modal-content">
+                    <!--Modal Header-->
+                    <div class="modal-header">
+                        <h4 class="modal-title">
+                            Registration
+                        </h4>
+                        <button class="btn-close" type="button" data-bs-dismiss="modal"></button>
+                    </div>
+                    <!--Modal Header-->
+
+                    <!--Modal Body-->
+                    <div class="modal-body mt-3">
+                        <table>
+                            <p>
+                                <tr>
+                                <label>Username:</label>
+                                <input type="text" name="name">
+                                </tr>
+                            </p>
+                            <p>
+                                <tr>
+                                <label>Password:</label>
+                                <input type="text" name="address">
+                                </tr>
+                            </p>
+                        </table>
+                    </div>
+                    <!--Modal Body-->
+
+                    <!--Modal Footer-->
+                    <div class="modal-footer">
+                        <button class="btn btn-danger" type="submit">Sign up</button>
+                        <button class="btn btn-danger" type="button" data-bs-dismiss="modal">Close</button>
+                    </div>
+                    <!--Modal Footer-->
+                </div>
+            </div>
+        </div>
+        <!--The Modal-->
+    </div>
+    <!--Boostrap Modal-->
+</form>
+                    <a href="login.html" class="nav-item nav-link mt-4">Login</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    
+    <div class="row container-fluid text-center ">
+         <div class="card text-center m-3 col-md-4" style="width: 400px;">
+             <div class="card-header">Sushi</div>
+                 <div class="card-body">
+                     <img src="img/japen 1.webp" style="width: 100%;">
+                         
+                            <p class="card-text">Put simply, sushi is raw fish served on rice seasoned lightly with vinegar. It’s in the variety of flavours and textures – like tangy, creamy uni (sea urchin roe) and plump, juicy amaebi (sweet shrimp) – that things get interesting. Despite sushi’s lofty image, it has a humble origin: street food.</p>
+                                
+                </div>
+         </div>
+                      
+         <div class="card text-center m-3 col-md-4" style="width: 400px;">
+             <div class="card-header">Ramen</div>
+                <div class="card-body">
+                    <img src="img/japen 2.webp" style="width: 100%;">
+                        
+                            <p class="card-text">Ramen (egg noodles in a salty broth) is Japan’s favourite late-night meal. It’s also the perfect example of an imported dish – in this case from China – that the Japanese have made completely and deliciously their own. There are four major soup styles: tonkotsu (pork bone), miso, soy sauce and salt. Fukuoka is particularly famous for its rich tonkotsu ramen while pungent miso ramen is a specialty of Hokkaido.</p>
+                                 
+                 </div>
+             </div>
+
+             <div class="card text-center m-3 col-md-4" style="width: 400px;">
+                <div class="card-header">Unagi</div>
+                   <div class="card-body">
+                       <img src="img/japen 3.webp" style="width: 100%;">
+                           
+                               <p class="card-text">RUnagi is river eel, usually grilled over charcoal and lacquered with a sweet barbecue sauce. According to folklore, unagi is the ideal antidote to the heat and humidity of Japan’s stultifying summers. It’s a delicacy evocative of old Japan and most restaurants that specialise in eel have a wonderfully traditional approach. Fresh, wild-caught unagi is available May through October.</p>
+                                    
+                    </div>
+                </div>
+                <div class="card text-center m-3 col-md-4" style="width: 400px;">
+                    <div class="card-header">Tempura</div>
+                       <div class="card-body">
+                           <img src="img/japen 4.webp" style="width: 100%;">
+                               
+                                   <p class="card-text">Light and fluffy tempura is Japan’s contribution to the world of deep-fried foods (though it probably originated with Portuguese traders). The batter-coated seafood and vegetables are traditionally fried in sesame oil and served with either a tiny pool of salt or a dish of soy sauce-flavoured broth spiked with grated radish for dipping. Do not miss out on ebiten (tempura prawns).</p>
+                                        
+                        </div>
+                    </div>
+                    <div class="card text-center m-3 col-md-4" style="width: 400px;">
+                        <div class="card-header">Kaiseki</div>
+                           <div class="card-body">
+                               <img src="img/japen 5.webp" style="width: 100%;">
+                                   
+                                       <p class="card-text">Part dinner, part work of art, kaiseki is Japan’s haute cuisine. It originated centuries ago alongside the tea ceremony in Kyoto (and Kyoto remains the home of kaiseki). There’s no menu, just a procession of small courses meticulously arranged on exquisite crockery. Only fresh ingredients are used and each dish is designed to evoke the current season.</p>
+                                            
+                            </div>
+                        </div>
+                        <div class="card text-center m-3 col-md-4" style="width: 400px;">
+                            <div class="card-header">Soba</div>
+                               <div class="card-body">
+                                   <img src="img/japen 6.webp" style="width: 100%;">
+                                       
+                                           <p class="card-text">Soba – long, thin buckwheat noodles – have long been a staple of Japanese cuisine, particularly in the mountainous regions where hardy buckwheat grows better than rice. The noodles are served in either a hot, soy sauce-flavoured broth, or at room temperature on a bamboo mat with broth on the side for dipping. Purists, who bemoan soup-logged noodles, prefer the latter.</p>
+                                                
+                                </div>
+                            </div>
+                            <div class="card text-center m-3 col-md-4" style="width: 400px;">
+                                <div class="card-header">Shabu-shabu</div>
+                                   <div class="card-body">
+                                       <img src="img/japen 7.webp" style="width: 100%;">
+                                           
+                                               <p class="card-text">Shabu-shabu is the Japanese onomatopoeia for the sound of thin slices of beef or pork being swished around with chopsticks in bubbling broth. It’s a decadent dish, with platters of marbled meat brought to the table for diners to cook themselves (it takes only a moment) one mouthful at a time.</p>
+                                                    
+                                    </div>
+                                </div>
+                                <div class="card text-center m-3 col-md-4" style="width: 400px;">
+                                    <div class="card-header">Okonomiyaki</div>
+                                       <div class="card-body">
+                                           <img src="img/japen 8.webp" style="width: 100%;">
+                                               
+                                                   <p class="card-text">Literally “grilled as you like,” okonomiyaki is Japanese comfort food at its best, and a clear violation of the typical refined image of Japanese food. It’s a savoury pancake filled with any number of things (but usually cabbage and pork) and topped with fish flakes, dried seaweed, mayonnaise and a Worcester-style sauce. It’s also a lot of fun – at most restaurants, diners grill the dish themselves at a hotplate built into the table.</p>
+                                                        
+                                        </div>
+                                    </div>
+                                    <div class="card text-center m-3 col-md-4" style="width: 400px;">
+                                        <div class="card-header"> Tonkatsu</div>
+                                           <div class="card-body">
+                                               <img src="img/japen 9.webp" style="width: 100%;">
+                                                   
+                                                       <p class="card-text">Tonkatsu, breaded and deep-fried pork cutlet, dates to the late 19th century when Japan threw open its doors to Western influence. But never mind the European origin: the ingredients and attention to detail are thoroughly Japanese. Tonkatsu – especially when it’s kurobuta (Berkshire pork) from Kagoshima – is melt-in-your-mouth tender, served with a side of miso soup and a mountain of shredded cabbage.</p>
+                                                            
+                                            </div>
+                                        </div>
+                           
+                                                                                                                                        
+             <footer>
+                <div class="container mt-20" id="cerousel">
+                    <ul class="pagination">
+                        
+                        <li class="page-item"><a href="myanmar.html" class="page-link">1</a></li>
+                        <li class="page-item"><a href="koran.html" class="page-link">2</a></li>
+                        <li class="page-item"><a href="japen.html" class="page-link">3</a></li>
+                        <li class="page-item"><a href="italy.html" class="page-link">4</a></li>
+                    </ul>
+                </div>
+            </footer>
+</body>
+</html>
